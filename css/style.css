@@ -1,0 +1,178 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap");
+
+/* Scroll */
+body::-webkit-scrollbar {
+    width: 0px;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #272727;
+}
+
+.navbar-brand {
+    font-family: "Hammersmith One", sans-serif;
+}
+
+/* Utilities */
+.btn {
+    border-radius: 20px;
+}
+
+/* Home */
+.home {
+    background-image: url(/img/home-bg.jpg);
+    background-size: cover;
+    background-position-x: center;
+    height: 93vh;
+    color: white;
+    text-align: center;
+}
+
+.home .lead {
+    color: white;
+    margin-top: 120px;
+    font-size: 50px;
+}
+
+.home .display-4 {
+    font-family: "Hammersmith One", sans-serif;
+    font-size: 15vw;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgb(0, 0, 0, 0.6);
+}
+
+/* Github */
+.github {
+    background-image: url(/img/github-bg.png);
+    background-size: cover;
+    background-position-y: center;
+}
+
+.github .display-4 {
+    font-size: 40px;
+}
+
+.github .githubim {
+    width: 30%;
+}
+
+/* Discord */
+.discord {
+    background-image: url(/img/discord-bg.png);
+    background-size: cover;
+    background-position-y: center;
+}
+
+.discord .display-4 {
+    font-size: 40px;
+}
+
+.discord .discordim {
+    width: 20%;
+}
+
+/* Youtube */
+.youtube {
+    background-image: url(/img/youtube-bg.png);
+    background-size: cover;
+    background-position-y: center;
+}
+
+.youtube .display-4 {
+    font-size: 40px;
+}
+
+.youtube .embed {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+}
+
+.youtube .embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* DESKTOP VERSION */
+@media (min-width: 992px) {
+    /* Navbar */
+    .navbar {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-brand,
+    .nav-link {
+        color: white !important;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+    }
+
+    .nav-link {
+        margin-right: 30px;
+    }
+
+    .nav-link::after {
+        content: "";
+        border-bottom: 3px solid white;
+        display: block;
+        width: 0%;
+        margin: auto;
+        padding-bottom: 5px;
+        margin-bottom: -8px;
+        transition: width 0.4s ease;
+    }
+
+    .nav-link:hover::after {
+        width: 100%;
+    }
+
+    /* Home */
+    .home {
+        height: 100vh;
+        margin-top: -56px;
+    }
+
+    .home .display-4 {
+        font-size: 170px;
+    }
+
+    /* Github */
+    .github .display-4 {
+        position: relative;
+        font-size: 50px;
+        text-align: right;
+        top: 30%;
+    }
+
+    .github .githubim {
+        width: 70%;
+    }
+
+    /* Discord */
+    .discord .display-4 {
+        position: relative;
+        font-size: 50px;
+        top: 30%;
+    }
+
+    .discord .discordim {
+        width: 40%;
+        float: right;
+    }
+
+    /* Youtube */
+    .youtube .display-4 {
+        position: relative;
+        font-size: 50px;
+        text-align: right;
+        top: 30%;
+    }
+}
